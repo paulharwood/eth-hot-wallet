@@ -6,12 +6,16 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Spin, Alert } from 'antd';
+import { Spin, Alert, Icon } from 'antd';
 import styled from 'styled-components';
 
+import TokenCards from 'components/TokenCards';
+
+
 import AddressTable from 'components/AddressTable';
-// import AddressListStatus from 'components/AddressListStatus';
-// import CheckBalancesStatus from 'components/CheckBalancesStatus';
+import AddressListStatus from 'components/AddressListStatus';
+
+import CheckBalancesStatus from 'components/CheckBalancesStatus';
 import AddressTableFooter from 'components/AddressTableFooter';
 import WelcomeText from 'components/WelcomeText';
 
@@ -19,6 +23,8 @@ const Div = styled.div`
   padding: 30px 5px 20px 10px;
   min-height: 100px;
 `;
+const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
+
 
 function AddressView(props) {
   const {
@@ -82,6 +88,7 @@ function AddressView(props) {
   if (isComfirmed) {
     addressViewContent = (
       <Div>
+        <TokenCards {...addressTableProps} />
         <AddressTable {...addressTableProps} />
         <AddressTableFooter {...addressTableFooterProps} />
       </Div>
@@ -92,8 +99,7 @@ function AddressView(props) {
     <Spin
       spinning={generateKeystoreLoading}
       style={{ position: 'static' }}
-      size="large"
-      tip="Loading..."
+      indicator={antIcon}
     >
       {addressViewContent}
     </Spin>

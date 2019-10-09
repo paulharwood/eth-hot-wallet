@@ -32,7 +32,7 @@ function SendGasPrice({ gasPrice, onChangeGasPrice, locked }) {
         <Col span={4}>
           <InputNumber
             min={0.5}
-            max={100}
+            max={10000}
             step={0.1}
             style={{ marginLeft: 16 }}
             value={gasPrice}

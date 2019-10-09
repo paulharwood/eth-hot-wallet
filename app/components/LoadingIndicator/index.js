@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import { Spin } from 'antd';
+import { Spin, Icon } from 'antd';
 import styled from 'styled-components';
 
 const Div = styled.div`
@@ -17,10 +17,12 @@ transform: translate(-50%, -50%);
 
 `;
 
+const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
+
 function LoadingIndicator() {
   return (
     <Div>
-      <Spin size="large" tip="ETH Hot Wallet" />
+      <Spin indicator={antIcon} />
     </Div>
   );
 }

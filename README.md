@@ -1,6 +1,6 @@
-# ETH-Hot-Wallet 
+# ETH-Hot-Wallet
 
-## Ethereum wallet with ERC20 support - A web wallet 
+## Ethereum wallet with ERC20 support - A web wallet
 
 ![eth-hot-wallet ethereum wallet preview](https://paullaux.github.io/eth-hot-wallet/docs/images/eth-hot-wallet-ethereum.PNG)
 
@@ -12,7 +12,7 @@ https://eth-hot-wallet.com
 
 ### Core components
 
-- [ ] [LightWallet V3](https://github.com/ConsenSys/eth-lightwallet) 
+- [ ] [LightWallet V3](https://github.com/ConsenSys/eth-lightwallet)
 - [ ] [Web3.js](https://github.com/ethereum/web3.js/) Ethereum JavaScript API
 - [ ] [React-boilerplate](https://github.com/react-boilerplate/react-boilerplate) as a wrapper of React JS, Redux, Saga, Reselect, ImmutableJS and more
 - [ ] [Ant Design](https://github.com/ant-design/ant-design) React js components
@@ -29,19 +29,19 @@ https://eth-hot-wallet.com
 ### Features
 
 - [x] Encryption keys generated from seed and stored in the browser.
-- [x] Network selector including local and remote rpc 
+- [x] Network selector including local and remote rpc
 - [x] Eth balance auto converted to btc/usd/euro.
 - [x] Responsive design for mobile support.
 
 
 #### ERC20 wallet and native token support
-Eth-hot-wallet supports erc20 tokens. From the user side, the tokens will have the same look and feel like Ether. 
-To interact with contracts, we use 
+Eth-hot-wallet supports erc20 tokens. From the user side, the tokens will have the same look and feel like Ether.
+To interact with contracts, we use
 ```javascript
 web3.eth.contract(erc20Abi)
 ```
 Like all other network communication in the wallet, calls to erc20 contracts are done inside `app/containers/Header/saga.js`.
-ERC20 Abi can be imported using 
+ERC20 Abi can be imported using
 ```javascript
 import { erc20Abi } from 'utils/contracts/abi';
 ```
@@ -101,3 +101,27 @@ After build, webpack monitor will generate stats about bundle size:
 ## License
 
 This project is licensed under the MIT license, Copyright (c) 2017 Paul Laux For more information see `LICENSE.md`.
+
+
+## Bugs
+
+  // module information
+  bitcore.version = 'v' + __webpack_require__("./node_modules/bitcore-mnemonic/node_modules/bitcore-lib/package.json").version;
+  bitcore.versionGuard = function(version) {
+    if (version !== undefined) {
+      var message = 'More than one instance of bitcore-lib found. ' +
+        'Please make sure to require bitcore-lib and check that submodules do' +
+        ' not also include their own bitcore-lib dependency.';
+      throw new Error(message);
+    }
+  };
+
+
+
+  to
+
+  // module information
+  bitcore.version = 'v' + __webpack_require__("./node_modules/bitcore-mnemonic/node_modules/bitcore-lib/package.json").version;
+  bitcore.versionGuard = function(version) {
+      return; // workaround for conflict
+  };

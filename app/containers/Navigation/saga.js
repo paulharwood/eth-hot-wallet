@@ -191,7 +191,7 @@ export function* confirmSendTransaction() {
       throw new Error('Gas price must be at least 0.1 Gwei');
     }
 
-    const msg = `Transaction created successfully. 
+    const msg = `Transaction created successfully.
     Sending ${amount} from ...${fromAddress.slice(-5)} to ...${toAddress.slice(-5)}`;
     yield put(confirmSendTransactionSuccess(msg));
   } catch (err) {
@@ -410,7 +410,8 @@ export function* getRates() {
     }
 
     // Call our request helper (see 'utils/request')
-    const apiRates = online ? (yield call(request, requestURL)) : dummyRates;
+    //const apiRates = online ? (yield call(request, requestURL)) : dummyRates;
+    const apiRates = dummyRates;
 
     // console.log(apiPrices);
 

@@ -14,8 +14,8 @@ import { StickyFooter } from './sticky';
 
 const Footer = StickyFooter.extend`
   textAlign: center;
-  background: #efeeee;
-  color: #5a5a5a;
+  background: transparent;
+  color: #EFF1F3;
   padding: 10px;
   font-size: 14px;
 `;
@@ -29,21 +29,11 @@ function PageFooter() {
   return (
     <Footer>
       <Row>
-        <Col sm={12} xs={24}>
-          {'ETH Hot Wallet - '}
-          <a href={github} target="_blank" rel="noopener">
-            Ethereum Wallet with ERC20 support (GitHub)
-          </a><br />
-          Created using: eth-lightwallet, React.js, Ant design...
-        </Col>
 
         <Span>
-          <Col sm={12} xs={24}>
-            <a href="https://monetaryCoin.org" target="_blank" rel="noopener">
-              MonetaryCoin Homepage
-            </a>
-            <br />
-            ETH: 0x97325941fafde5a182e6f7e5475a592ac615a3f2
+          <Col sm={24} xs={24}>
+          
+
           </Col>
         </Span>
 

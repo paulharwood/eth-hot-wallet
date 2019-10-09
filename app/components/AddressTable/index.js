@@ -18,19 +18,30 @@ const { Column } = Table;
 // import messages from './messages';
 
 const AddrTable = styled(Table)`
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
-  tbody{
-    background: white;
-  }
-  .ant-table{
-    font-size: 13px !important;
-  }
-  th.columnCenter,
-  td.columnCenter{
-    text-align: center;
-  }
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    tbody{
+      background: transparent;
+    }
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      background:transparent;
+      border:0;
+      color:#efefef;
+
+    }
+    .ant-table-bordered .ant-table-body > table {
+      border:0;
+    }
+    .ant-table{
+      font-size: 13px !important;
+      color:#efefef;
+    }
+    th.columnCenter,
+    td.columnCenter{
+      text-align: center;
+    }
 `;
 
 

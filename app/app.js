@@ -54,6 +54,15 @@ import '!file-loader?name=[name].[ext]!./images/mstile-144x144.png';
 import '!file-loader?name=[name]!./vendor/github/CNAME'; // for github - domain connection
 /* eslint-enable import/no-unresolved, import/extensions */
 
+// card backgrounds
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/nike.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/aramcoin.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/airmiles.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/boos.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/bitcoin.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/ethereum.png';
+
+
 // token icons
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/bat.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/bnb.png';
@@ -66,6 +75,7 @@ import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/fun.png'
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/gnt.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/icx.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/knc.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/chf.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/mkr.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/mero.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/omg.png';

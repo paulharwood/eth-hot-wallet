@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
 function SeedView({ loading, error, seed, password, onGenerateKeystore }) {
   if (loading) {
-    return <div> Loading....</div>;
+    return <div></div>;
   }
 
   if (error !== false) {

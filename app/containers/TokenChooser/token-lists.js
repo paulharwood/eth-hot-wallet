@@ -2,38 +2,14 @@
 export const TokenSelection = {
   Offline: [],
   'Local RPC': [],
-  'Ropsten Testnet': [
+  'Testnet': [
     {
-      symbol: 'symb',
-      name: 'Hot Symbol',
-      contractAddress: '0x0a460180ec4fd3d5eb9dca8f84e8ca45b2ad9160',
+      symbol: 'chf',
+      name: 'Channel.Fund',
+      contractAddress: '0xe4e65b2d91628683E02010B14448b2b197c23FDb',
       decimals: 18,
-      description: 'The most distributed token ever',
-      url: 'https://eth-hot-wallet.com',
-    },
-    {
-      symbol: 'mero',
-      name: 'MonetaryCoin Ero',
-      contractAddress: '0xb39fc5e11281012b4d83407a457d409ba344744f',
-      decimals: 18,
-      description: 'The MonetaryCoin protocol integrates Nobel Prize winning economic theory with blockchain technology.',
-      url: 'https://MonetaryCoin.org',
-    },
-    {
-      symbol: 'omg',
-      name: 'OmiseGo',
-      contractAddress: '0xbcad569fe454e78ca90e4120d89b6b69f8db402f',
-      decimals: 18,
-      description: 'OmiseGO (OMG) is a public Ethereum-based financial technology for use in mainstream digital wallets',
-      url: 'https://omisego.network/',
-    },
-    {
-      symbol: 'bat',
-      name: 'Basic Attention Token',
-      contractAddress: '0xf3a1c162bc4a82ca5227d7c542c20dd087d2c37b',
-      decimals: 18,
-      description: 'The Basic Attention Token is the new token for the digital advertising industry',
-      url: 'https://basicattentiontoken.org/',
+      description: 'The channel fund token, representing ownership of the Channel Fund projects.',
+      url: 'https://channel.fund',
     },
     {
       symbol: 'mkr',
@@ -44,7 +20,7 @@ export const TokenSelection = {
       url: 'https://makerdao.com/',
     },
   ],
-  'Main Net': [
+  'Live': [
     {
       symbol: 'mero',
       name: 'MonetaryCoin Ero',

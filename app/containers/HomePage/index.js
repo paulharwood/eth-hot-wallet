@@ -16,6 +16,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
+
 /* Components:  */
 import AddressView from 'components/AddressView';
 import SendToken from 'containers/SendToken';
@@ -27,8 +28,8 @@ import PageFooter from 'components/PageFooter';
 import { Content } from 'components/PageFooter/sticky';
 
 /* Header: */
-import Header from 'containers/Header';
-import { loadNetwork, checkBalances, getExchangeRates } from 'containers/Header/actions';
+import Navigation from 'containers/Navigation';
+import { loadNetwork, checkBalances, getExchangeRates } from 'containers/Navigation/actions';
 import {
   makeSelectNetworkReady,
   makeSelectCheckingBalanceDoneTime,
@@ -37,7 +38,7 @@ import {
   makeSelectGetExchangeRatesDoneTime,
   makeSelectGetExchangeRatesLoading,
   makeSelectGetExchangeRatesError,
-} from 'containers/Header/selectors';
+} from 'containers/Navigation/selectors';
 
 /* General */
 import injectReducer from 'utils/injectReducer';
@@ -246,13 +247,14 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     return (
       <div>
         <Content>
-          <Header />
-          <SubHeader {...subHeaderProps} />
+
           <GenerateWalletModal {...generateWalletProps} />
           <RestoreWalletModal {...restoreWalletModalProps} />
           <AddressView {...addressViewProps} />
           <SendToken {...sendTokenProps} />
           <TokenChooser {...tokenChooserProps} />
+          <SubHeader {...subHeaderProps} />
+          <Navigation />
         </Content>
         <PageFooter />
       </div>
