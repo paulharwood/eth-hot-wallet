@@ -247,7 +247,6 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     return (
       <div>
         <Content>
-
           <GenerateWalletModal {...generateWalletProps} />
           <RestoreWalletModal {...restoreWalletModalProps} />
           <AddressView {...addressViewProps} />

@@ -29,7 +29,7 @@ import {
   makeSelectTokenInfoList,
 } from 'containers/HomePage/selectors';
 
-import { loadNetwork } from 'containers/Header/actions';
+import { loadNetwork } from 'containers/Navigation/actions';
 
 import { changeFrom } from 'containers/SendToken/actions';
 
@@ -39,7 +39,7 @@ import { generatedPasswordLength, hdPathString, offlineModeString, defaultNetwor
 
 import { timer } from 'utils/common';
 
-import { getEthBalancePromise } from 'containers/Header/saga';
+import { getEthBalancePromise } from 'containers/Navigation/saga';
 
 import {
   generateWalletSucces,
@@ -210,7 +210,7 @@ export function* generateAddress() {
     try {
       const balance = yield call(getEthBalancePromise, newAddress);
       yield put(changeBalance(newAddress, 'eth', balance));
-    } catch (err) { }  // eslint-disable-line 
+    } catch (err) { }  // eslint-disable-line
   } catch (err) {
     yield call(timer, 1000); // eye candy
     yield put(generateAddressError(err.message));

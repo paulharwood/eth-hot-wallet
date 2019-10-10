@@ -15,7 +15,7 @@ import { compose } from 'redux';
 import injectReducer from 'utils/injectReducer';
 
 import TokenChooserList from 'components/TokenChooserList';
-import { makeSelectNetworkName } from 'containers/Header/selectors';
+import { makeSelectNetworkName } from 'containers/Navigation/selectors';
 import { makeSelectChosenTokens } from './selectors';
 import { toggleToken, confirmNewTokenInfo } from './actions';
 // import { makeSelectTokenChooser } from './selectors';

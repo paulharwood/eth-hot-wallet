@@ -24,7 +24,7 @@ import SendConfirmationView from 'components/SendConfirmationView';
 import SendProgress from 'components/SendProgress';
 
 import { makeSelectAddressList, makeSelectTokenInfoList } from 'containers/HomePage/selectors';
-import { makeSelectTxExplorer } from 'containers/Header/selectors';
+import { makeSelectTxExplorer } from 'containers/Navigation/selectors';
 
 import {
   changeFrom,
